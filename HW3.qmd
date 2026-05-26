@@ -1,0 +1,9 @@
+---
+title: "Homework 3"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+```
