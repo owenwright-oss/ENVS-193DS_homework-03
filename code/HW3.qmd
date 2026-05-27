@@ -1,9 +1,29 @@
 ---
 title: "Homework 3"
-format: html
+author: "Owen Wright"
+date: "2026-05-28"
+format:
+  pdf:
+    toc: true
+execute:
+  warning: false
+  message: false
 editor: visual
 ---
 
 ```{r}
+#Load the tidyverse package
 library(tidyverse)
+
+# Load the here package so file paths follow correctly
+library(here)
+
+#Read in the kelp data and store as an object called kelp
+kelp <- read_csv(here("data", "temp-kelp.csv"))
+
+# Look at the first few rows to confirm that the data imported correctly.
+head(kelp)
+
+# Check the column names and data types.
+glimpse(kelp)
 ```
