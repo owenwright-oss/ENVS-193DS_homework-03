@@ -192,23 +192,42 @@ theme(plot.title = element_text(hjust = 0.5),
 
 # Problem 3. Affective visualization
 
-## a. Describe in words what an affective visualization could look like for your personal data 
+## a. Describe in words what an affective visualization could look like for your personal data
 
 For my affective visualization, I am thinking of creating a 3-dimensional model of a skyline, where exposure to light represents productivity level and the height of each building represents a range of minutes of sleep. I would orientate the buildings in a parallel line so the tallest building (representing most sleep) would be at the front, and closest to the light (representing the sun), meaning it would therefore be the most lit up. The subsequent buildings would then be partially covered by the building in front of them and receive less light, so the smallest building (representing the least sleep) would be the darkest and represent lower productivity. The angle of the trend line should follow the angle of descending buildings on the skyline as to properly explore the relationship between sleep and productivity level.
 
 ## b. Create a sketch (on paper) of your idea.
+
 ![Sketch of affective visualization](../images/IMG_1282.pdf)
 
 ## c. Make a draft of your visualization
-![Draft of affective visualization](../images/IMG_12792.pdf)
+
+![Draft of affective visualization](../images/visual.pdf)
 
 ## d. Write an artist statement
 
-My affective visualization works to represent the relationship between sleep and productivity. I used a skyline of buildings to represent different amounts of sleep, with the taller buildings, that are exposed to more sunlight, representing more sleep. The shorter buildings are exposed to less sunlight and represent less sleep. By arranging the model to where the taller buildings receive more light, the model displays how sleep affects ones ability to complete more tasks, and therefore their level of productivity. 
+My affective visualization works to represent the relationship between sleep and productivity. I used a skyline of buildings to represent different amounts of sleep, with the taller buildings, that are exposed to more sunlight, representing more sleep. The shorter buildings are exposed to less sunlight and represent less sleep. By arranging the model to where the taller buildings receive more light, the model displays how sleep affects ones ability to complete more tasks, and therefore their level of productivity.
 
 ## e. Prep your materials to share in class
 
 [Slides for affective visualization](../images/HW3_193DS.pdf)
 
+# Problem 4. Statistical critique
 
+## a. Revisit and summarize
 
+I chose to look at the linear regression test performed in this experiment, which looks at the relationship between that of the pH levels in the stream and its relationship to the streams biological health, based on the IBI (Index of Biolocal Integrity) model values. The response variable is the IBI scores, or how biologically “healthy” the system is, and the predictor variable, in this case, is the sample pH of the stream.
+
+![Table described in Homework 2](../images/YES.pdf)
+
+## b. Visual clarity
+
+The table clearly represents the summary statistics from the regression tests as each independent variable is listed in its own row and the statistical outputs are separated into columns. This makes it easy to compare which physico-chemical variables were more strongly related to IBI scores, especially because pH has the highest \$R\^2\$ value and is marked as statistically significant with an asterisk.
+
+## c. Aesthetic clarity
+
+The table has relatively low visual clutter as it uses a simple layout with clear rows and columns. Ultimately, most of the table is used to present statistical information rather than unnecessary decoration.=
+
+## d. Recommendations
+
+I would recommend bolding or visually emphasizing the pH row because as it is the only statistically significant result in the table. Furthermore, I would also recommend adding a scatterplot showing pH on the x-axis and IBI score on the y-axis.
