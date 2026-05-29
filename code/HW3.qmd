@@ -191,4 +191,8 @@ theme(plot.title = element_text(hjust = 0.5),
 
 # Problem 3. Affective visualization
 
+## a. Describe in words what an affective visualization could look like for your personal data 
+
+For my affective visualization, I am thinking of creating a 3-dimensional model of a skyline, where exposure to light represents productivity level and the height of each building represents a range of minutes of sleep. I would orientate the buildings in a parallel line so the tallest building (representing most sleep) would be at the front, and closest to the light (representing the sun), meaning it would therefore be the most lit up. The subsequent buildings would then be partially covered by the building in front of them and receive less light, so the smallest building (representing the least sleep) would be the darkest and represent lower productivity. The angle of the trend line should follow the angle of descending buildings on the skyline as to properly explore the relationship between sleep and productivity level.
+
 
