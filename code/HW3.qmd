@@ -21,9 +21,39 @@ library(here)
 #Read in the kelp data and store as an object called kelp
 kelp <- read_csv(here("data", "temp-kelp.csv"))
 
-# Look at the first few rows to confirm that the data imported correctly.
-head(kelp)
+#Read in personal data and store as an object called personal_data
+personal_data <- read_csv(here("data", "personaldata2.csv"))
 
-# Check the column names and data types.
-glimpse(kelp)
 ```
+
+# Problem 1. **Giant kelp fronds**
+
+## a. An appropriate test
+
+In order to determine the strength of the relationship between temperature and giant kelp frond elongation rate, one may employ a Pearson correlation test, which measures how strong the relationship is and whether it is positive or negative. Additionally, one may utilize a simple linear regression test to determine whether ocean temperature predicts kelp elongation rate and what the growth rate is for each 1°C increase in temperature. Both tests are applicable because both variables measured are continuous.
+
+## b. **Create a visualization**
+
+```{r}
+#Create a scatterplot to display the relationship between temperature and
+#giant kelp frond elongation rate.
+ggplot(
+  data = kelp,
+  mapping = aes(x = temp_c,
+                y = kelp_elong)) +
+
+#Add data for each kelp observation in the data set and change color
+geom_point(color = "darkgreen",
+          size = 2,
+          alpha = 0.75) +
+  
+#Relabel the both axis
+labs(x = "Ocean temperature (°C)",
+     y = "Giant kelp frond elongation rate (cm/day)") +
+  
+#Change theme
+theme_light()
+
+```
+
+# 
