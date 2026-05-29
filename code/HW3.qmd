@@ -75,7 +75,7 @@ plot(kelp_lm)
 
 ```
 
-I checked the linearity assumption with the use of the scatterplot, which displayed a generally negative relationship between ocean temperature and giant kelp frond elongation rate. I then checked the assumptions using the diagnostic plots from the linear model, including the residuals vs. fitted plot, Q-Q plot, scale-location plot, and residuals vs. leverage plot. The residuals vs. fitted plot displayed a slight curve in the smoothed trend line, although there was no extreme plattern and the residuals were mostly spread around 0, so is reasonable to continue with a simple linear regression.
+I checked the linearity assumption with the use of the scatterplot, which displayed a generally negative relationship between ocean temperature and giant kelp frond elongation rate. I then checked the assumptions using the diagnostic plots from the linear model, including the residuals vs. fitted plot, Q-Q plot, scale-location plot, and residuals vs. leverage plot. The residuals vs. fitted plot displayed a slight curve in the smoothed trend line, although there was no extreme pattern and the residuals were mostly spread around 0, so is reasonable to continue with a simple linear regression.
 
 ### Run test
 
@@ -202,7 +202,7 @@ For my affective visualization, I am thinking of creating a 3-dimensional model 
 
 ## c. Make a draft of your visualization
 
-![Draft of affective visualization](../images/visual.pdf)
+![Draft of affective visualization](../images/visual.pdf){width=70%}
 
 ## d. Write an artist statement
 
@@ -210,7 +210,7 @@ My affective visualization works to represent the relationship between sleep and
 
 ## e. Prep your materials to share in class
 
-[Slides for affective visualization](../images/HW3_193DS.pdf)
+[Slides for affective visualization](https://github.com/owenwright-oss/ENVS-193DS_homework-03/raw/main/images/HW3_193DS.pdf)
 
 # Problem 4. Statistical critique
 
@@ -226,8 +226,8 @@ The table clearly represents the summary statistics from the regression tests as
 
 ## c. Aesthetic clarity
 
-The table has relatively low visual clutter as it uses a simple layout with clear rows and columns. Ultimately, most of the table is used to present statistical information rather than unnecessary decoration.=
+The table has relatively low visual clutter as it uses a simple layout with clear rows and columns. Ultimately, most of the table is used to present statistical information rather than unnecessary decoration.
 
 ## d. Recommendations
 
-I would recommend bolding or visually emphasizing the pH row because as it is the only statistically significant result in the table. Furthermore, I would also recommend adding a scatterplot showing pH on the x-axis and IBI score on the y-axis.
+I would recommend bolding or visually emphasizing the pH row because as it is the only statistically significant result in the table. Furthermore, I would also recommend adding a scatterplot showing pH on the x-axis and IBI score on the y-axis. This would ultimately make the relationship easier to interpret as the table asserts a statistical summary, but fails to show the underlying observations and data.
