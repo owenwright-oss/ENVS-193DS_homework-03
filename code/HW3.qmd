@@ -26,13 +26,13 @@ personal_data <- read_csv(here("data", "personaldata2.csv"))
 
 ```
 
-# Problem 1. **Giant kelp fronds**
+# Problem 1. Giant kelp fronds
 
 ## a. An appropriate test
 
 In order to determine the strength of the relationship between temperature and giant kelp frond elongation rate, one may employ a Pearson correlation test, which measures how strong the relationship is and whether it is positive or negative. Additionally, one may utilize a simple linear regression test to determine whether ocean temperature predicts kelp elongation rate and what the growth rate is for each 1°C increase in temperature. Both tests are applicable because both variables measured are continuous.
 
-## b. **Create a visualization**
+## b. Create a visualization
 
 ```{r}
 #Create a scatterplot to display the relationship between temperature and
@@ -61,7 +61,7 @@ theme_light()
 
 ```
 
-## **c. Check your assumptions and run your test**
+## c. Check your assumptions and run your test
 
 ### Check assumptions
 
@@ -85,15 +85,15 @@ summary(kelp_lm)
 
 ```
 
-## d. **Results communication**
+## d. Results communication
 
 In order to evaluate the strength of the relationship between temperature and giant kelp frond elongation rate, I used a simple linear regression, as kelp frond elongation rate is a continuous response variable and ocean temperature is a continuous predictor variable. The results suggest that ocean temperature significantly predicted kelp frond elongation rate (linear model: F(1, 30) = 26.93, p \< 0.001, $\alpha = 0.05$, adjusted R² = 0.455). Therefore, for each 1°C increase in ocean temperature, one would expect a decrease in giant kelp frond elongation rate by 0.432 ± 0.083 (SE) cm/day.
 
-## e. **Test implications**
+## e. Test implications
 
 I would communicate to the team that higher ocean temperatures were generally associated with lower giant kelp frond elongation rates, according to this data set. As kelp elongation rate was shown to decrease by 0.432 cm/day for each 1°C increase in ocean temperature, areas with warmer ocean conditions may be prudent to monitor when looking at its relationship to kelp growth and overall kelp forest health. Despite this, as the study is based on one observational data set, it is important to communicate that this result shows an association rather than proving a causation.
 
-## f. **Double check your own work**
+## f. Double check your own work
 
 ```{r}
 #Run a Pearson correlation test to test the strength of the relationship
@@ -105,9 +105,9 @@ cor.test(x = kelp$temp_c,
 
 Both the Pearson correlation test and simple linear regression tests reject the null hypothesis, as both tests suggest a statistically significant negative relationship between ocean temperature and giant kelp frond elongation rate. The Pearson correlation test displays a moderately strong negative relationship between ocean temperature and giant kelp frond elongation rate (Pearson’s r = -0.688, t(30) = -5.19, p \< 0.001, $\alpha = 0.05$). This conclusion is in alignment with the results of the simple linear regression test, as they both suggest that kelp frond elongation rate decreased as ocean temperature increased.
 
-# **Problem 2. Personal data**
+# Problem 2. Personal data
 
-## **a. Updating your visualizations**
+## a. Updating your visualizations
 
 ### Productivity by day of the week
 
@@ -138,7 +138,7 @@ geom_boxplot(fill = "steelblue") +
 labs(x = "Day of the week",
      y = "Productivity level (%)",
      title = "Productivity by Day of the Week",
-     subtitle = "Most recent observation: 05-26-2026") +
+     subtitle = "Most recent observation: 2026-05-26") +
 
 #Change theme
 theme_light() +
@@ -172,7 +172,7 @@ geom_smooth(method = "lm",
 labs(x = "Sleep (minutes)",
      y = "Productivity level (%)",
      title = "Productivity versus Sleep",
-     subtitle = "Most recent observation: 05-26-2026") +
+     subtitle = "Most recent observation: 2026-05-26") +
 
 #Change theme
 theme_light() +
@@ -182,3 +182,13 @@ theme(plot.title = element_text(hjust = 0.5),
       plot.subtitle = element_text(hjust = 0.5))
 
 ```
+
+## b. Captions
+
+**Figure 1. Productivity level varied by day of the week across the personal data collection period.** Blue boxplots display the median and interquartile range of productivity level, measured as a percentage of tasks completed out of tasks planned at the beginning of the day, for each day of the week. Data were derived from personal observations collected from 2026-04-19 to 2026-05-26. Data accessed 2026-05-28.
+
+**Figure 2. Productivity level generally increased as sleep increased throughout the personal data collection period.** Transparent dark green points represent daily observations of sleep, in minutes, and productivity level, measured as a percentage of tasks completed out of tasks planned at the beginning of the day. The black line shows the linear trend between sleep and productivity. Data were derived from personal observations collected from 2026-04-19 to 2026-05-26. Data accessed 2026-05-28.
+
+# Problem 3. Affective visualization
+
+
