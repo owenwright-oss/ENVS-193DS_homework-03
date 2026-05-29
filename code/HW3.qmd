@@ -56,4 +56,22 @@ theme_light()
 
 ```
 
-# 
+## **c. Check your assumptions and run your test**
+
+```{r}
+#Create a linear regression model
+kelp_lm <- lm(kelp_elong ~ temp_c,
+              data = kelp)
+
+#Create a diagnostic plots to check model assumptions
+plot(kelp_lm)
+
+```
+
+I checked the linearity assumption with the use of the scatterplot, which displayed a generally negative relationship between ocean temperature and giant kelp frond elongation rate. I then checked the assumptions using the diagnostic plots from the linear model, including the residuals vs. fitted plot, Q-Q plot, scale-location plot, and residuals vs. leverage plot. The residuals vs. fitted plot displayed a slight curve in the smoothed trend line, although there was no extreme plattern and the residuals were mostly spread around 0, so is reasonable to continue with a simple linear regression.
+
+```{r}
+#Summarize the linear regression model
+summary(kelp_lm)
+
+```
