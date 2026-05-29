@@ -198,7 +198,7 @@ For my affective visualization, I am thinking of creating a 3-dimensional model 
 ## b. Create a sketch (on paper) of your idea.
 
 
-![Sketch of affective visualization](/Users/owenwright/Downloads/IMG_1282.heic)
+![Sketch of affective visualization](../images/IMG_1282.pdf)
 
 
 
