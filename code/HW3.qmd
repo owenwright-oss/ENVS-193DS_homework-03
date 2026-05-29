@@ -46,8 +46,13 @@ ggplot(
 geom_point(color = "darkgreen",
           size = 2,
           alpha = 0.75) +
+
+#Add a linear trend line to decipher the relationship
+geom_smooth(method = "lm",
+            se = FALSE,
+            color = "black") +
   
-#Relabel the both axis
+#Relabel the both axes
 labs(x = "Ocean temperature (°C)",
      y = "Giant kelp frond elongation rate (cm/day)") +
   
@@ -99,3 +104,81 @@ cor.test(x = kelp$temp_c,
 ```
 
 Both the Pearson correlation test and simple linear regression tests reject the null hypothesis, as both tests suggest a statistically significant negative relationship between ocean temperature and giant kelp frond elongation rate. The Pearson correlation test displays a moderately strong negative relationship between ocean temperature and giant kelp frond elongation rate (Pearson’s r = -0.688, t(30) = -5.19, p \< 0.001, $\alpha = 0.05$). This conclusion is in alignment with the results of the simple linear regression test, as they both suggest that kelp frond elongation rate decreased as ocean temperature increased.
+
+# **Problem 2. Personal data**
+
+## **a. Updating your visualizations**
+
+### Productivity by day of the week
+
+```{r}
+#Define a productivity column as a percentage
+personal_data <- personal_data |>
+  mutate(productivity = tasks_completed / tasks_planned * 100)
+
+#Create a boxplot to display productivity versus day of the week
+ggplot(data = personal_data,
+       mapping = aes(x = factor(day_of_week,
+                                levels = c("Monday",
+                                           "Tuesday",
+                                           "Wednesday",
+                                           "Thursday",
+                                           "Friday",
+                                           "Saturday",
+                                           "Sunday")),
+                     y = productivity)) +
+
+#Set y-axis limits to show full range
+scale_y_continuous(limits = c(0, 100)) +
+
+#Add boxplots to summarize productivity depending on each day
+geom_boxplot(fill = "steelblue") +
+
+#Relabel both axes and add most recent observation date
+labs(x = "Day of the week",
+     y = "Productivity level (%)",
+     title = "Productivity by Day of the Week",
+     subtitle = "Most recent observation: 05-26-2026") +
+
+#Change theme
+theme_light() +
+  
+#Center title and subtitle and make x-axis smaller
+theme(plot.title = element_text(hjust = 0.5),
+      plot.subtitle = element_text(hjust = 0.5),
+      axis.text.x = element_text(size = 7))
+
+```
+
+### Productivity versus sleep
+
+```{r}
+#Create a scatterplot to display relationship between sleep and productivity (tasks completed/tasks planned)
+ggplot(data = personal_data,
+       mapping = aes(x = sleep_minutes,
+                     y = productivity)) +
+
+#Add one point for each daily observation from data set
+geom_point(color = "darkgreen",
+           size = 2,
+           alpha = 0.75) +
+
+#Add a linear trend line to display relationship
+geom_smooth(method = "lm",
+            se = FALSE,
+            color = "black") +
+
+#Relabel both axes and insert most recent observation date
+labs(x = "Sleep (minutes)",
+     y = "Productivity level (%)",
+     title = "Productivity versus Sleep",
+     subtitle = "Most recent observation: 05-26-2026") +
+
+#Change theme
+theme_light() +
+
+#Center the title and subtitle
+theme(plot.title = element_text(hjust = 0.5),
+      plot.subtitle = element_text(hjust = 0.5))
+
+```
