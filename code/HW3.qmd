@@ -75,3 +75,9 @@ I checked the linearity assumption with the use of the scatterplot, which displa
 summary(kelp_lm)
 
 ```
+
+## d. **Results communication**
+
+In order to evaluate the strength of the relationship between temperature and giant kelp frond elongation rate, I used a simple linear regression, as kelp frond elongation rate is a continuous response variable and ocean temperature is a continuous predictor variable. The results suggest that ocean temperature significantly predicted kelp frond elongation rate (linear model: F(1, 30) = 26.93, p \< 0.001, $\alpha = 0.05$, adjusted R² = 0.455). Therefore, for each 1°C increase in ocean temperature, giant kelp frond elongation rate decreased by 0.432 ± 0.083 (SE) cm/day.
+
+## e. **Test implications**
